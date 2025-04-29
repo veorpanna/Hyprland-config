@@ -2,22 +2,13 @@
 
 import subprocess
 import logging
-from typing import Callable
 
 
-def install_via_pacman(package: str) -> None:
-    subprocess.run(["sudo", "pacman", "-S", "--noconfirm", package], check=True)
-
-
-def install_via_yay(package: str) -> None:
-    subprocess.run(["yay", "-S", "--noconfirm", package], check=True)
-
-
-def install_pkg(install_callback: Callable[[str], None], package: str) -> None:
+def install_pkg(package: str) -> None:
     try:
-        install_callback(package)
+        subprocess.run(["sudo", "pacman", "-S", "--noconfirm", package], check=True)
         logging.debug(f"Installed {package}")
-        
+
     except subprocess.CalledProcessError as e:
         logging.error(f"Failed to install {package}: {e}")
 
