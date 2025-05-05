@@ -1,4 +1,4 @@
-cp -rf .dotfiles/* ~/
+cp -a dotfiles/. ~/
 
 sudo pacman -S --noconfirm wayland hyprland git xdg-user-dirs base-devel xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
 sudo pacman -S --noconfirm ttf-droid noto-fonts ttf-jetbrains-mono ttf-jetbrains-mono-nerd otf-font-awesome
