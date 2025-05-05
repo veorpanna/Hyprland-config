@@ -1,6 +1,6 @@
 cp -a dotfiles/. ~/
 
-sudo pacman -S --noconfirm wayland hyprland git xdg-user-dirs base-devel xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
+sudo pacman -S --noconfirm wayland hyprland sddm git xdg-user-dirs base-devel xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
 sudo pacman -S --noconfirm ttf-droid noto-fonts ttf-jetbrains-mono ttf-jetbrains-mono-nerd otf-font-awesome
 sudo pacman -S --noconfirm wofi polkit-gnome hyprpaper mako waybar wlogout hypridle 
 sudo pacman -S --noconfirm nm-connection-editor blueman pavucontrol 
